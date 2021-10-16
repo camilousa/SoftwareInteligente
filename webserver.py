@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/", methods=['get', 'post'])
 def hello_world():
     nombre = request.form.get('nombre')
-    edad = request.form.get('edad')
+    edad = int(request.form.get('edad'))
     return render_template("Bienvenido.html", nombre=nombre, edad=edad)
 
 
